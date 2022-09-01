@@ -4,9 +4,37 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "npx hardhat compile",
+    "test": "npx hardhat test",
+    "deploy": "npx hardhat run scripts/deploy.js",
+    "deploy:ropsten": "npx hardhat run scripts/deploy.js --network ropsten",
+    "fix": "standard --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Redf0xD/platzi-punks.git"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Redf0xD/platzi-punks/issues"
+  },
+  "homepage": "https://github.com/Redf0xD/platzi-punks#readme",
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^1.0.2",
+    "dotenv": "^16.0.1",
+    "eslint": "^8.23.0",
+    "eslint-config-standard": "^17.0.0",
+    "hardhat": "^2.10.2",
+    "standard": "^17.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "./node_modules/standard/eslintrc.json"
+    ]
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.7.3"
+  }
 }
